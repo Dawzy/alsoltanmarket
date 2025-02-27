@@ -1,4 +1,4 @@
-import { MouseEventHandler } from "react";
+import { MouseEventHandler, ReactNode } from "react";
 
 export interface ButtonProps {
   text: string;
@@ -24,6 +24,11 @@ export interface SearchAisleProps {
 export interface FilterProps {
   items: string[];
   withNoneOption: boolean;
+}
+
+export interface ServiceHintProps {
+  children: ReactNode;
+  text: string;
 }
 
 export interface Product {
