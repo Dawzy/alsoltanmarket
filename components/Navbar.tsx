@@ -11,7 +11,7 @@ const Navbar = () => {
     <header className="w-full z-10">
       <nav className="max-w-[1440px] mx-auto flex justify-between items-center sm:px-16 px-6 py-4 text-4xl font-semibold">
         {/* Logo group */}
-        <div className="flex">
+        <div className="flex items-center">
           <Image
             src="/logo.jpg"
             alt="Logo"
@@ -21,11 +21,11 @@ const Navbar = () => {
             priority
             className="object-contain rounded-full mr-2"
           />
-          <h1 className="text-5xl">Al Soltan</h1>
+          <h1 className="text-5xl">Al Soltan Market</h1>
         </div>
 
         {/* Button group */}
-        <div className="flex gap-10">
+        <div className="flex gap-10 items-center">
           <Link href="/" className={`flex justify-center items-center ${pathname === "/" ? "underline" : ""}`}>
             Home
           </Link>

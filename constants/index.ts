@@ -14,5 +14,6 @@ const Aisles = [
 const Products = aggregateProductNames();
 
 export {
-  Aisles
+  Aisles,
+  Products
 }

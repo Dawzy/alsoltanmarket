@@ -1,7 +1,11 @@
+
+
 const Home = () => {
   return (
     <div className="w-full h-full flex">
-      Hello world!
+      <div className="flex w-full">
+
+      </div>
     </div>
   )
 }
