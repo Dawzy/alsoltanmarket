@@ -1,3 +1,5 @@
+import { aggregateProductNames } from "@/utils";
+
 const Aisles = [
   "Diary",
   "Snacks",
@@ -5,8 +7,11 @@ const Aisles = [
   "Toys",
   "Condiments",
   "Seasonings",
-  "Canned"
+  "Canned",
+  "Middle Eastern"
 ];
+
+const Products = aggregateProductNames();
 
 export {
   Aisles
