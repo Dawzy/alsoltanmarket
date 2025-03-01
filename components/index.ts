@@ -6,6 +6,10 @@ import SearchAisles from "./SearchAisles";
 import ServiceHint from "./ServiceHint";
 import Background from "./Background";
 
+import InfoGroup from "./InfoGroup";
+import HoursGroup from "./HoursGroup"
+import ServicesGroup from "./ServicesGroup";
+
 export {
   Navbar,
   Button,
@@ -13,5 +17,8 @@ export {
   Filter,
   SearchAisles,
   ServiceHint,
-  Background
+  Background,
+  InfoGroup,
+  HoursGroup,
+  ServicesGroup
 }
