@@ -16,7 +16,7 @@ const HoursGroup = () => {
         {Object.keys(schedule).map(day => (
           <>
             <div key={day} className="font-bold">{day}</div>
-            <div key={day} className={`${schedule[day].toLowerCase() === "closed" && "text-red-500"}`}>
+            <div key={`${day}_`} className={`${schedule[day].toLowerCase() === "closed" && "text-red-500"}`}>
               {schedule[day]}
             </div>
           </>

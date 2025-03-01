@@ -1,4 +1,5 @@
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 import Button from "./Button";
 import SearchBar from "./SearchBar";
 import Filter from "./Filter";
@@ -12,6 +13,7 @@ import ServicesGroup from "./ServicesGroup";
 
 export {
   Navbar,
+  Footer,
   Button,
   SearchBar,
   Filter,

@@ -1,6 +1,5 @@
 import { HoursGroup, InfoGroup, ServicesGroup } from "@/components";
 
-
 const Home = () => {
   return (
     <div className="w-full h-full flex">
@@ -12,4 +11,5 @@ const Home = () => {
     </div>
   )
 }
+
 export default Home;

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Bitter } from "next/font/google";
-import { Background, Navbar } from "@/components";
+import { Background, Footer, Navbar } from "@/components";
 import { Toaster } from "react-hot-toast";
 import "./globals.css";
 
@@ -28,6 +28,7 @@ export default function RootLayout({
         <div className="flex flex-col p-6 mx-auto w-full max-w-[1440px] h-full">
           {children}
         </div>
+        <Footer />
       </body>
     </html>
   );
