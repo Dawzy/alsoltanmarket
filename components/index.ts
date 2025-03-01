@@ -4,6 +4,7 @@ import SearchBar from "./SearchBar";
 import Filter from "./Filter";
 import SearchAisles from "./SearchAisles";
 import ServiceHint from "./ServiceHint";
+import Background from "./Background";
 
 export {
   Navbar,
@@ -11,5 +12,6 @@ export {
   SearchBar,
   Filter,
   SearchAisles,
-  ServiceHint
+  ServiceHint,
+  Background
 }

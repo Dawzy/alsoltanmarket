@@ -1,5 +1,4 @@
 import { ServiceHint } from "@/components";
-import { Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
 import { FaBitcoin, FaDollarSign, FaSmoking } from "react-icons/fa";
 import { MdAtm } from "react-icons/md";
 
