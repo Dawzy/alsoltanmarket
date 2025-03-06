@@ -7,30 +7,13 @@ export interface ButtonProps {
   isSecondary?: boolean;
 };
 
-export interface InputProps {
-  value: string;
-  setValue: (value: string) => void;
-  type?: "password" | "search";
-  label?: string;
-  width: string;
-  placeholder?: string;
-};
-
-export interface SearchAisleProps {
-  aisle: string;
-  setAisle: (aisle: string) => void;
-};
-
-export interface FilterProps {
-  items: string[];
-  withNoneOption: boolean;
-}
-
 export interface ServiceHintProps {
   children: ReactNode;
   text: string;
 }
 
-export interface Product {
+export type Product = {
   name: string;
+  imgUrl: string;
+  aisles: string[];
 }

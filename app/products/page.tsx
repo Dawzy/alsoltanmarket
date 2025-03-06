@@ -1,13 +1,10 @@
-import { SearchBar, Filter } from "@/components";
-import { Aisles } from "@/constants";
+import { SearchBar } from "@/components";
 
 const Products = () => {
   return (
-    <div>
-      <div className="flex gap-3">
-        <SearchBar />
-        <Filter items={Aisles} withNoneOption />
-      </div>
+    <div className="flex gap-3 items-center">
+      <SearchBar />
+      <p className="text-center font-bold text-lg">*Not all products are listed, for inquiries on prices or availability, call during open hours.</p>
     </div>
   );
 }

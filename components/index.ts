@@ -2,8 +2,6 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Button from "./Button";
 import SearchBar from "./SearchBar";
-import Filter from "./Filter";
-import SearchAisles from "./SearchAisles";
 import ServiceHint from "./ServiceHint";
 import Background from "./Background";
 
@@ -16,8 +14,6 @@ export {
   Footer,
   Button,
   SearchBar,
-  Filter,
-  SearchAisles,
   ServiceHint,
   Background,
   InfoGroup,

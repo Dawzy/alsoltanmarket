@@ -20,6 +20,12 @@ body {
   font-family: "Bitter", Arial, Helvetica, sans-serif;
 }
 
-/* .searchbar-input {
-  @apply w-full h-[48px] pl-12 p-4 bg-gray-200 rounded-r-full max-sm:rounded-full outline-none cursor-pointer text-sm;
-} */
+/* For use with products grid later */
+/* height: 100%;
+width: 100%;
+padding: 1rem;
+
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(var(--item-width), max-content));
+grid-gap: 2rem;
+justify-content: center; */

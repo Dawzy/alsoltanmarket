@@ -1,1 +1,137 @@
-[]
+[
+  {
+    "name": "Alani Cherry Slush",
+    "imgUrl": "/alanicherry.jpg",
+    "aisles": ["Beverages", "Juices"]
+  },
+  {
+    "name": "Pinar Cheese Spread",
+    "imgUrl": "/pinarcheespread.jpg",
+    "aisles": ["Dairy", "Cheese"]
+  },
+  {
+    "name": "Alani Cosmic Dust",
+    "imgUrl": "/alanicosmicdust.jpg",
+    "aisles": ["Supplements", "Energy Boosters"]
+  },
+  {
+    "name": "Pita Egyptian Bran Bread",
+    "imgUrl": "/pitaegyptianbranbread.jpg",
+    "aisles": ["Bakery", "Breads"]
+  },
+  {
+    "name": "Allen's Lemonade 1L",
+    "imgUrl": "/allen'slemonade1l.png",
+    "aisles": ["Beverages", "Juices"]
+  },
+  {
+    "name": "President's Choice Margarine",
+    "imgUrl": "/prechoicemarg.png",
+    "aisles": ["Dairy", "Butter & Margarine"]
+  },
+  {
+    "name": "Allen's Peach Cocktail",
+    "imgUrl": "/allenspeachcocktail.png",
+    "aisles": ["Beverages", "Juices"]
+  },
+  {
+    "name": "President's Choice Lemon-Ginger Sparkling Lemonade",
+    "imgUrl": "/preschoicelemangoresplemonade.png",
+    "aisles": ["Beverages", "Sparkling Drinks"]
+  },
+  {
+    "name": "Arizona Raspberry Iced Tea",
+    "imgUrl": "/arizgraspberry.PNG",
+    "aisles": ["Beverages", "Iced Tea"]
+  },
+  {
+    "name": "Premier Protein Shake",
+    "imgUrl": "/prmierprotein.jpg",
+    "aisles": ["Supplements", "Protein Shakes"]
+  },
+  {
+    "name": "Arizona Green Tea",
+    "imgUrl": "/arizgt.jpg",
+    "aisles": ["Beverages", "Tea"]
+  },
+  {
+    "name": "ReaLemon Lemon Juice 125ml",
+    "imgUrl": "/realemon-lemon-juice-125-ml.jpg",
+    "aisles": ["Condiments", "Cooking Essentials"]
+  },
+  {
+    "name": "Arizona Mucho Mango Juice Cocktail",
+    "imgUrl": "/Arizona-MuchoMangoFruitJuiceCocktail.jpg",
+    "aisles": ["Beverages", "Juices"]
+  },
+  {
+    "name": "ReaLime 125ml",
+    "imgUrl": "/realime125ml.jpg",
+    "aisles": ["Condiments", "Cooking Essentials"]
+  },
+  {
+    "name": "Astro Yogurt",
+    "imgUrl": "/astro.png",
+    "aisles": ["Dairy", "Yogurt"]
+  },
+  {
+    "name": "ReaLemon 945ml",
+    "imgUrl": "/Reallemon945ml.png",
+    "aisles": ["Condiments", "Cooking Essentials"]
+  },
+  {
+    "name": "Best Guava Nectar",
+    "imgUrl": "/bestguavanectar.jpg",
+    "aisles": ["Beverages", "Juices"]
+  },
+  {
+    "name": "Red Bull",
+    "imgUrl": "/redbull.jpg",
+    "aisles": ["Beverages", "Energy Drinks"]
+  },
+  {
+    "name": "Best Mango Nectar",
+    "imgUrl": "/BESTmangonectar.jpg",
+    "aisles": ["Beverages", "Juices"]
+  },
+  {
+    "name": "Canada Dry 710ml",
+    "imgUrl": "/canadadry710ml.jpg",
+    "aisles": ["Beverages", "Soda"]
+  },
+  {
+    "name": "Red Bull Winter Edition",
+    "imgUrl": "/redbullwinter.png",
+    "aisles": ["Beverages", "Energy Drinks"]
+  },
+  {
+    "name": "Cedar Phyllo Dough",
+    "imgUrl": "/CedarPhylloDough.jpg",
+    "aisles": ["Frozen Foods", "Baking"]
+  },
+  {
+    "name": "Cedar Pomegranate Juice",
+    "imgUrl": "/cedarpomegratejuice.jpg",
+    "aisles": ["Beverages", "Juices"]
+  },
+  {
+    "name": "Coconut Juice with Pulp",
+    "imgUrl": "/coconutjuicepulp.png",
+    "aisles": ["Beverages", "Juices"]
+  },
+  {
+    "name": "Coconut Water Without Pulp",
+    "imgUrl": "/coconutwaterwithoutpulp.jpeg",
+    "aisles": ["Beverages", "Coconut Water"]
+  },
+  {
+    "name": "Coca-Cola Bottle",
+    "imgUrl": "/cokebottle.jpg",
+    "aisles": ["Beverages", "Soda"]
+  },
+  {
+    "name": "Coppertone Sunscreen",
+    "imgUrl": "/coppertone.jpg",
+    "aisles": ["Personal Care", "Sunscreen"]
+  }
+]

@@ -1,5 +1,5 @@
 import { ServiceHint } from "@/components";
-import { FaBitcoin, FaDhl, FaDollarSign, FaSmoking } from "react-icons/fa";
+import { FaBitcoin, FaDollarSign, FaSmoking } from "react-icons/fa";
 import { MdAtm } from "react-icons/md";
 
 const ServicesGroup = () => {
