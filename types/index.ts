@@ -12,6 +12,15 @@ export interface ServiceHintProps {
   text: string;
 }
 
+export interface FilterProps {
+  term: string;
+  limit: number;
+}
+
+export interface ProductPageProps {
+  searchParams: FilterProps;
+}
+
 export type Product = {
   name: string;
   imgUrl: string;

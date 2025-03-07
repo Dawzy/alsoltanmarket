@@ -21,7 +21,7 @@ const SearchBar = () => {
   
   const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    updateSearchParams(item && item.toLowerCase() || null);
+    updateSearchParams( item?.toLowerCase() || query?.toLowerCase() );
   }
 
   const updateSearchParams = (item: string | null) => {
@@ -29,9 +29,9 @@ const SearchBar = () => {
 
     // Update search param
     if (item) {
-      searchParams.set("item", item);
+      searchParams.set("term", item);
     } else {
-      searchParams.delete("item");
+      searchParams.delete("term");
     }
 
     // Re-route
@@ -78,7 +78,7 @@ const SearchBar = () => {
                 leave="transition ease-in duration-100"
                 leaveFrom="opacity-100"
                 leaveTo="opacity-0"
-                afterLeave={() => setQuery("")}
+                // afterLeave={() => setQuery("")}
               >
                 <ComboboxOptions className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
                   {filterdItems.map(item => (

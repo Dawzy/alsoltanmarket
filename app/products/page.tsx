@@ -1,6 +1,16 @@
 import { SearchBar } from "@/components";
+import { ProductPageProps } from "@/types";
+import { getProducts } from "@/utils";
 
-const Products = () => {
+const Products = async ({ searchParams }: ProductPageProps) => {
+
+  const products = await getProducts({
+    term: searchParams.term || "",
+    limit: searchParams.limit || 10
+  }); 
+
+  console.log(products);
+
   return (
     <div className="flex gap-3 items-center">
       <SearchBar />
