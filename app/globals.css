@@ -3,15 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #171717;
-    --foreground: #ededed;
-  }
+  --background: #171717;
+  --foreground: #ededed;
+  --item-width: 250px;
 }
 
 body {
@@ -30,12 +24,21 @@ body {
   text-gray-900
 }
 
-/* For use with products grid later */
-/* height: 100%;
-width: 100%;
-padding: 1rem;
+.product-grid {
+  @apply
+  p-4
+  justify-center
+  grid;
 
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(var(--item-width), max-content));
-grid-gap: 2rem;
-justify-content: center; */
+  grid-template-columns: repeat(auto-fit, minmax(var(--item-width), max-content));
+  grid-gap: 2rem;
+}
+
+.no-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scroll {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}

@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Footer = () => (
-  <footer className="flex flex-col mt-1 border-t border-gray-100 bg-[#171717] z-10">
+  <footer className="flex flex-col mt-1 border-t border-gray-100 bg-[#171717] z-20">
     <div className="relative flex max-md:flex-col flex-wrap gap-5 sm:px-16 px-6 py-10 w-full justify-center">
       <Image src="/logo.jpg" alt="logo" width={50} height={25} className="object-contain rounded-full absolute left-5" />
 

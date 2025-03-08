@@ -6,7 +6,7 @@ const HoursGroup = () => {
     "Thursday": "8:00 AM - 10:00 PM",
     "Friday": "8:00 AM - 10:00 PM",
     "Saturday": "8:00 AM - 10:00 PM",
-    "Sunday": "9:00 AM - 9:00 PM"
+    "Sunday": "9:00 AM - \u00A0\u00A09:00 PM" // For styling alignment consistency
   }
 
   return (

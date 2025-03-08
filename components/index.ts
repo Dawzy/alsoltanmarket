@@ -8,6 +8,7 @@ import LimitFilter from "./LimitFilter";
 import InfoGroup from "./InfoGroup";
 import HoursGroup from "./HoursGroup"
 import ServicesGroup from "./ServicesGroup";
+import ProductCard from "./ProductCard";
 
 export {
   Navbar,
@@ -19,5 +20,6 @@ export {
   Background,
   InfoGroup,
   HoursGroup,
-  ServicesGroup
+  ServicesGroup,
+  ProductCard
 }

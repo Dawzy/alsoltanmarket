@@ -21,6 +21,10 @@ export interface ProductPageProps {
   searchParams: FilterProps;
 }
 
+export interface ProductCardProps {
+  product: Product;
+}
+
 export type Product = {
   name: string;
   imgUrl: string;
