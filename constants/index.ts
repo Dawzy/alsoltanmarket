@@ -1,6 +1,6 @@
 import { aggregateProductNames } from "@/utils";
 
-const Aisles = [
+const AISLES = [
   "Dairy",
   "Snacks",
   "Drinks",
@@ -32,9 +32,17 @@ const Aisles = [
   "Sunscreen"
 ];
 
-const Products = aggregateProductNames();
+const PRODUCTS = aggregateProductNames();
+
+const LIMITS = [
+  10,
+  15,
+  20,
+  30
+];
 
 export {
-  Aisles,
-  Products
+  AISLES,
+  PRODUCTS,
+  LIMITS
 }

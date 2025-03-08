@@ -25,7 +25,7 @@ export default function RootLayout({
         <Toaster />
         <Background />
         <Navbar />
-        <div className="flex flex-col p-6 mx-auto w-full max-w-[1440px] h-full">
+        <div className="flex flex-col px-12 py-6 mx-auto w-full max-w-[1440px] h-full">
           {children}
         </div>
         <Footer />

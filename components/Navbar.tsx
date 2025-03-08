@@ -9,7 +9,7 @@ const Navbar = () => {
   
   return (
     <header className="w-full z-10">
-      <nav className="max-w-[1440px] mx-auto flex justify-between items-center sm:px-16 px-6 py-4 text-4xl font-semibold">
+      <nav className="max-w-[1440px] mx-auto flex justify-between items-center sm:px-12 px-6 py-4 text-4xl font-semibold">
         {/* Logo group */}
         <div className="flex items-center">
           <Image

@@ -1,4 +1,4 @@
-import { SearchBar } from "@/components";
+import { LimitFilter, ProductSearchBar } from "@/components";
 import { ProductPageProps } from "@/types";
 import { getProducts } from "@/utils";
 
@@ -9,11 +9,10 @@ const Products = async ({ searchParams }: ProductPageProps) => {
     limit: searchParams.limit || 10
   }); 
 
-  console.log(products);
-
   return (
     <div className="flex gap-3 items-center">
-      <SearchBar />
+      <ProductSearchBar />
+      <LimitFilter />
       <p className="text-center font-bold text-lg">*Not all products are listed, for inquiries on prices or availability, call during open hours.</p>
     </div>
   );

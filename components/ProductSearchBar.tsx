@@ -1,6 +1,6 @@
 "use client"
 
-import { Aisles, Products } from "@/constants";
+import { AISLES, PRODUCTS } from "@/constants";
 import { Combobox, ComboboxButton, ComboboxInput, ComboboxOption, ComboboxOptions, Transition } from "@headlessui/react";
 import { Fragment, useRef, useState } from "react";
 import { BiSearch } from "react-icons/bi";
@@ -14,7 +14,7 @@ const SearchBar = () => {
   const formRef = useRef<HTMLFormElement>(null);
   
   // List of items to autocomplete
-  const list: string[] = [...Products, ...Aisles];
+  const list: string[] = [...PRODUCTS, ...AISLES];
   const filterdItems = (query === "") ?
   list :
   list.filter(item => item.toLowerCase().replace(/\s+/g, "").includes(query.toLowerCase().replace(/\s+/g, "")));
@@ -66,7 +66,7 @@ const SearchBar = () => {
 
               {/* Input */}
               <ComboboxInput
-                className="w-full h-[48px] p-4 rounded-md max-sm:rounded-full bg-gray-200 outline-none text-sm text-gray-900"
+                className="w-full input p-4 outline-none"
                 placeholder="search"
                 displayValue={(value: string) => value}
                 onChange={(e) => setQuery(e.target.value)}
@@ -99,4 +99,5 @@ const SearchBar = () => {
     </form>
   )
 }
+
 export default SearchBar;
