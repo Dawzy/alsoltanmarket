@@ -1,30 +1,14 @@
 "use client"
 
 import { Listbox, ListboxButton, ListboxOption, ListboxOptions } from "@headlessui/react";
-import { useState } from "react";
 import { LIMITS } from "@/constants";
 import { FaCheck, FaChevronDown } from "react-icons/fa";
-import { useRouter } from "next/navigation";
+import { LimitFilterProps } from "@/types";
 
-const LimitFilter = () => {
-  const router = useRouter();
-  const [selected, setSelected] = useState(LIMITS[0]);
-
-  const onLimitSelected = (newLimit: number) => {
-    // Update search params
-    const searchParams = new URLSearchParams(window.location.search);
-
-    if (newLimit)
-      searchParams.set("limit", newLimit.toString());
-    
-    setSelected( newLimit );
-
-    const newPathname = `${window.location.pathname}?${searchParams.toString()}`
-    router.push(newPathname);
-  }
+const LimitFilter = ({ selected, setSelected }: LimitFilterProps) => {
 
   return (
-    <Listbox value={selected} onChange={onLimitSelected}>
+    <Listbox value={selected} onChange={(newValue: number) => setSelected(newValue)}>
       <ListboxButton className="relative input min-w-20 flex justify-center items-center gap-2">
         <p className="absolute left-4">{selected}</p>
         <FaChevronDown

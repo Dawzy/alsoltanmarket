@@ -15,7 +15,6 @@ export const hasSubstring = (str: string, substr: string) => {
   )
 }
 
-export const aggregateProductNames = () => inventory.map( (product: Product) => product.name);
 export const aggregateAisleNames = () => {
   const allAisles: string[] = [];
   const exists: { [key: string]:boolean } = {};
@@ -39,7 +38,7 @@ export const getProducts = async (filters: FilterProps) => {
   // Get products that match term and aisle
   const data: Product[] = inventory.filter(product =>
     hasSubstring(product.name, term) &&
-    product.aisles.includes(aisle)
+    (aisle === "" || product.aisles.includes(aisle))
   );
   
   // Limit the number of elements in the array

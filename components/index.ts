@@ -9,6 +9,7 @@ import InfoGroup from "./InfoGroup";
 import HoursGroup from "./HoursGroup"
 import ServicesGroup from "./ServicesGroup";
 import ProductCard from "./ProductCard";
+import SearchGroup from "./SearchGroup";
 
 export {
   Navbar,
@@ -22,4 +23,5 @@ export {
   HoursGroup,
   ServicesGroup,
   ProductCard,
+  SearchGroup
 }

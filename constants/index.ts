@@ -1,49 +1,16 @@
-import { aggregateAisleNames, aggregateProductNames } from "@/utils";
-
-// const AISLES = [
-//   "Dairy",
-//   "Snacks",
-//   "Drinks",
-//   "Toys",
-//   "Condiments",
-//   "Seasonings",
-//   "Canned",
-//   "Middle Eastern",
-//   "Beverages",
-//   "Juices",
-//   "Cheese",
-//   "Supplements",
-//   "Energy Boosters",
-//   "Bakery",
-//   "Breads",
-//   "Butter & Margarine",
-//   "Sparkling Drinks",
-//   "Iced Tea",
-//   "Protein Shakes",
-//   "Tea",
-//   "Cooking Essentials",
-//   "Yogurt",
-//   "Energy Drinks",
-//   "Soda",
-//   "Frozen Foods",
-//   "Baking",
-//   "Coconut Water",
-//   "Personal Care",
-//   "Sunscreen"
-// ];
+import { aggregateAisleNames } from "@/utils";
 
 const AISLES = aggregateAisleNames();
-const PRODUCTS = aggregateProductNames();
+const LIMITS = [10, 15, 20, 30];
 
-const LIMITS = [
-  10,
-  15,
-  20,
-  30
-];
+const PARAMS = {
+  "AISLE": "aisle",
+  "TERM": "term",
+  "LIMIT": "limit"
+}
 
 export {
   AISLES,
-  PRODUCTS,
-  LIMITS
+  LIMITS,
+  PARAMS
 }

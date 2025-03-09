@@ -15,6 +15,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
         // MUST BE SAME AS --item-width
         width={250}
         height={250}
+        quality={50}
         sizes="full"
       />
     </div>

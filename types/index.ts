@@ -1,4 +1,4 @@
-import { MouseEventHandler, ReactNode } from "react";
+import { Dispatch, MouseEventHandler, ReactNode, SetStateAction } from "react";
 
 export interface ButtonProps {
   text: string;
@@ -27,9 +27,15 @@ export interface ProductCardProps {
 }
 
 export interface SearchBarProps {
-  paramName: string;
   list: string[];
   placeholder?: string;
+  value: string;
+  setValue: Dispatch<SetStateAction<string>>;
+}
+
+export interface LimitFilterProps {
+  selected: number;
+  setSelected: Dispatch<SetStateAction<number>>;
 }
 
 export type Product = {
