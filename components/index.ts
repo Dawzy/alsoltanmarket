@@ -1,7 +1,7 @@
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Button from "./Button";
-import ProductSearchBar from "./ProductSearchBar";
+import SearchBar from "./SearchBar";
 import ServiceHint from "./ServiceHint";
 import Background from "./Background";
 import LimitFilter from "./LimitFilter";
@@ -14,12 +14,12 @@ export {
   Navbar,
   Footer,
   Button,
-  ProductSearchBar,
+  SearchBar,
   LimitFilter,
   ServiceHint,
   Background,
   InfoGroup,
   HoursGroup,
   ServicesGroup,
-  ProductCard
+  ProductCard,
 }

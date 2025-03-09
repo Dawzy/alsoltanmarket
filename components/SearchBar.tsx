@@ -1,23 +1,23 @@
 "use client"
 
-import { AISLES, PRODUCTS } from "@/constants";
 import { Combobox, ComboboxButton, ComboboxInput, ComboboxOption, ComboboxOptions, Transition } from "@headlessui/react";
 import { Fragment, useRef, useState } from "react";
 import { BiSearch } from "react-icons/bi";
 import { useRouter } from "next/navigation";
 import { GrClose } from "react-icons/gr";
+import { hasSubstring } from "@/utils";
+import { SearchBarProps } from "@/types";
 
-const SearchBar = () => {
+const SearchBar = ({ paramName, list, placeholder }: SearchBarProps) => {
   const router = useRouter();
   const [item, setItem] = useState<string | null>("");
   const [query, setQuery] = useState("");
   const formRef = useRef<HTMLFormElement>(null);
   
   // List of items to autocomplete
-  const list: string[] = [...PRODUCTS, ...AISLES];
   const filterdItems = (query === "") ?
   list :
-  list.filter(item => item.toLowerCase().replace(/\s+/g, "").includes(query.toLowerCase().replace(/\s+/g, "")));
+  list.filter(item => hasSubstring(item, query));
   
   const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -29,9 +29,9 @@ const SearchBar = () => {
 
     // Update search param
     if (item) {
-      searchParams.set("term", item);
+      searchParams.set(paramName, item);
     } else {
-      searchParams.delete("term");
+      searchParams.delete(paramName);
     }
 
     // Re-route
@@ -67,7 +67,7 @@ const SearchBar = () => {
               {/* Input */}
               <ComboboxInput
                 className="w-full input p-4 outline-none"
-                placeholder="search"
+                placeholder={placeholder || "search"}
                 displayValue={(value: string) => value}
                 onChange={(e) => setQuery(e.target.value)}
               />

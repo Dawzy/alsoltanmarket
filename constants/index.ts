@@ -1,37 +1,38 @@
-import { aggregateProductNames } from "@/utils";
+import { aggregateAisleNames, aggregateProductNames } from "@/utils";
 
-const AISLES = [
-  "Dairy",
-  "Snacks",
-  "Drinks",
-  "Toys",
-  "Condiments",
-  "Seasonings",
-  "Canned",
-  "Middle Eastern",
-  "Beverages",
-  "Juices",
-  "Cheese",
-  "Supplements",
-  "Energy Boosters",
-  "Bakery",
-  "Breads",
-  "Butter & Margarine",
-  "Sparkling Drinks",
-  "Iced Tea",
-  "Protein Shakes",
-  "Tea",
-  "Cooking Essentials",
-  "Yogurt",
-  "Energy Drinks",
-  "Soda",
-  "Frozen Foods",
-  "Baking",
-  "Coconut Water",
-  "Personal Care",
-  "Sunscreen"
-];
+// const AISLES = [
+//   "Dairy",
+//   "Snacks",
+//   "Drinks",
+//   "Toys",
+//   "Condiments",
+//   "Seasonings",
+//   "Canned",
+//   "Middle Eastern",
+//   "Beverages",
+//   "Juices",
+//   "Cheese",
+//   "Supplements",
+//   "Energy Boosters",
+//   "Bakery",
+//   "Breads",
+//   "Butter & Margarine",
+//   "Sparkling Drinks",
+//   "Iced Tea",
+//   "Protein Shakes",
+//   "Tea",
+//   "Cooking Essentials",
+//   "Yogurt",
+//   "Energy Drinks",
+//   "Soda",
+//   "Frozen Foods",
+//   "Baking",
+//   "Coconut Water",
+//   "Personal Care",
+//   "Sunscreen"
+// ];
 
+const AISLES = aggregateAisleNames();
 const PRODUCTS = aggregateProductNames();
 
 const LIMITS = [

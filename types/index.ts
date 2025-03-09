@@ -14,6 +14,7 @@ export interface ServiceHintProps {
 
 export interface FilterProps {
   term: string;
+  aisle: string;
   limit: number;
 }
 
@@ -23,6 +24,12 @@ export interface ProductPageProps {
 
 export interface ProductCardProps {
   product: Product;
+}
+
+export interface SearchBarProps {
+  paramName: string;
+  list: string[];
+  placeholder?: string;
 }
 
 export type Product = {
