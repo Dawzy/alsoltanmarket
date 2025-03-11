@@ -11,7 +11,7 @@ const ServiceHint = ({ children, text }: ServiceHintProps) => {
       <div
         onMouseEnter={() => setVisible(true)}
         onMouseLeave={() => setVisible(false)}
-        className="h-min w-min cursor-pointer"
+        className="h-12 w-12 flex justify-center items-center cursor-pointer"
       >
         {children}
       </div>
