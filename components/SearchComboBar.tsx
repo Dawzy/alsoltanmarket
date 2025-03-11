@@ -1,11 +1,11 @@
 "use client"
 
-import { Combobox, ComboboxInput, ComboboxOption, ComboboxOptions, Transition } from "@headlessui/react";
+import { Combobox, ComboboxButton, ComboboxInput, ComboboxOption, ComboboxOptions, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
 import { hasSubstring } from "@/utils";
 import { SearchBarProps } from "@/types";
 
-const SearchBar = ({ list, placeholder, value, setValue }: SearchBarProps) => {
+const SearchComboBar = ({ list, placeholder, value, setValue }: SearchBarProps) => {
   const [query, setQuery] = useState(value);
   
   // List of items to autocomplete
@@ -15,13 +15,17 @@ const SearchBar = ({ list, placeholder, value, setValue }: SearchBarProps) => {
     <Combobox value={value} onChange={(newValue: string) => setValue(newValue || "")} as="div"
     className="relative w-1/2 max-sm:flex-col max-sm:gap-4 max-sm:w-full flex items-center max-w-3xl">
       <div className="relative w-full">
-        <ComboboxInput
-          autoComplete="off"
-          className="w-full input p-4 outline-none"
-          placeholder={placeholder || "search"}
-          displayValue={(val: string) => val}
-          onChange={(e) => setQuery(e.target.value)}
-        />
+        <div className="w-full input p-4 flex items-center justify-between z-10">
+          <ComboboxInput
+            autoComplete="off"
+            className="w-full input p-4 outline-none"
+            placeholder={placeholder || "search"}
+            displayValue={(val: string) => val}
+            onChange={(e) => setQuery(e.target.value)}
+          />
+          <ComboboxButton className="bg-transparent border-l-2 border-gray-300 pl-2"
+          > Search </ComboboxButton>
+        </div>
 
         {/* Options Group */}
         <Transition
@@ -45,4 +49,4 @@ const SearchBar = ({ list, placeholder, value, setValue }: SearchBarProps) => {
   )
 }
 
-export default SearchBar;
+export default SearchComboBar;

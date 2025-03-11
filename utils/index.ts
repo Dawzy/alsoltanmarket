@@ -16,6 +16,7 @@ export const hasSubstring = (str: string, substr: string) => {
 }
 
 export const aggregateAisleNames = () => {
+  // Aggregate unique aisle names
   const allAisles: string[] = [];
   const exists: { [key: string]:boolean } = {};
 
@@ -33,6 +34,7 @@ export const aggregateAisleNames = () => {
 }
 
 export const getProducts = async (filters: FilterProps) => {
+  // Get & filter products
   const { term, aisle, limit } = filters;
 
   // Get products that match term and aisle

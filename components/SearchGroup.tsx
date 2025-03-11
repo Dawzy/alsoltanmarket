@@ -1,6 +1,6 @@
 "use client"
 
-import { LimitFilter, SearchBar } from "@/components";
+import { LimitFilter, SearchComboBar } from "@/components";
 import { AISLES, LIMITS, PARAMS } from "@/constants";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -14,22 +14,35 @@ const SearchGroup = () => {
   const [term, setTerm] = useState("");
   const [aisle, setAisle] = useState("");
   const [limit, setLimit] = useState(LIMITS[0]);
+  const [searchStatus, setSearchStatus] = useState("");
 
   useEffect(() => {
-    updateResults()
+    updateResults();
   }, [aisle, limit])
 
   useEffect(() => {
     const params = new URLSearchParams(searchParams);
-    const termParam = params.get(PARAMS.TERM) || "";
-    const aisleParam = params.get(PARAMS.AISLE) || "";
-    const limitParam = params.get(PARAMS.LIMIT) || "10";
-    
-    setTerm(termParam)
-    setAisle(aisleParam);
-    setLimit( parseInt(limitParam) )
+    const termParam = params.get(PARAMS.TERM);
+    const aisleParam = params.get(PARAMS.AISLE);
+    const limitParam = params.get(PARAMS.LIMIT);
 
-  }, [searchParams])
+    // Update search status
+    let newStatus = "";
+    if (termParam || aisleParam) {
+      newStatus = "Showing results ";
+      if (termParam)
+        newStatus += `for "${termParam}"`;
+      if (aisleParam)
+        newStatus += ` in ${aisleParam}`;
+    }
+    setSearchStatus(newStatus);
+    
+    // Update states
+    setTerm(termParam  || "")
+    setAisle(aisleParam || "");
+    setLimit( parseInt(limitParam || "10") )
+
+  }, [searchParams]);
 
   const updateResults = () => {
     // Get current
@@ -47,7 +60,7 @@ const SearchGroup = () => {
     else
       params.delete(PARAMS.AISLE);
 
-      // Add limit
+    // Add limit
     if (limit !== LIMITS[0]) // LIMITS[0] is default value
       params.set(PARAMS.LIMIT, limit.toString());
     else
@@ -75,18 +88,17 @@ const SearchGroup = () => {
             Search
           </Button>
         </div>
-        <SearchBar list={AISLES} placeholder="Search in aisles..." value={aisle} setValue={setAisle} />
+        <SearchComboBar list={AISLES} placeholder="Search in aisles..." value={aisle} setValue={setAisle} />
         <LimitFilter selected={limit} setSelected={setLimit}/>
         <p className="text-center font-bold text-lg">
           *Not all products are listed. For inquiries on prices or availability, call during open hours.
         </p>
       </div>
-      {/* {(term !== "" || aisle !== "") &&
+      {searchStatus !== "" &&
         <p className="text-2xl w-full font-bold text-center">
-          {`Showing results for ${term} in ${aisle}. `}
-          <Link className="underline text-blue-400" href="/products">Clear search</Link>
+          {searchStatus}. <Link className="underline text-blue-400" href="/products">Clear search</Link>
         </p>
-      } */}
+      }
     </>
   )
 }
