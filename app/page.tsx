@@ -2,9 +2,11 @@ import { HoursGroup, ServicesGroup } from "@/components";
 
 const Home = () => {
   return (
-    <div className="mt-12 flex flex-col w-full h-full justify-between items-between gap-7">
-      <p className="font-bold text-4xl italic text-center">"Family owned convenience store with an emphasis on convenience!"</p>
-      <div className="flex justify-between items-start">
+    <div className="sm:mt-12 flex flex-col w-full h-full justify-around items-between gap-10">
+      <p className="text-xl md:text-4xl font-bold italic text-center">
+        "Family owned convenience store with an emphasis on convenience!"
+      </p>
+      <div className="flex flex-col md:flex-row gap-10 justify-between items-center md:items-start">
         <ServicesGroup />
         <HoursGroup />
       </div>

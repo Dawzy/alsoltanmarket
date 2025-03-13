@@ -13,12 +13,15 @@ const HoursGroup = () => {
 
   return (
     <div className="flex flex-col items-center">
-      <p className="text-3xl">Open hours:</p>
-      <div className="grid grid-cols-2 gap-4 p-4 max-w-md mx-auto text-xl">
-        {Object.keys(schedule).map(day => (
+      <p className="text-4xl font-bold mb-2">Open hours:</p>
+      <hr className="border-2 rounded-full w-full" />
+      <div className="grid grid-cols-2 gap-4 p-4 max-w-md mx-auto text-sm sm:text-xl">
+        {Object.keys(schedule).map( (day, index) => (
           <>
-            <div key={day} className={`font-bold ${getDayOfWeek() === day ? "text-gray-200" : "text-gray-400"}`}>{day}</div>
-            <div key={`${day}_`}
+            <div key={day} className={`font-bold ${getDayOfWeek() === day ? "text-gray-200" : "text-gray-400"}`}>
+              {day}
+            </div>
+            <div key={index}
               className={`
                 ${schedule[day].toLowerCase() === "closed" && "text-red-500"}
                 ${getDayOfWeek() === day ? "text-gray-200 font-bold" : "text-gray-500"}`

@@ -20,8 +20,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-screen">
-      <body className={`${bitterFont.variable} antialiased h-full flex flex-col`} >
+    <html lang="en">
+      <body className={`${bitterFont.variable} antialiased md:h-screen md:flex flex-col`} >
         <Toaster />
         <Background />
         <Navbar />
