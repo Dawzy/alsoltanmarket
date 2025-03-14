@@ -18,7 +18,7 @@ const Products = async ({ searchParams }: ProductPageProps) => {
       <SearchGroup />
 
       {/* Products View */}
-      <div className="product-grid w-full h-[75vh] overflow-y-scroll overflow-x-hidden no-scroll">
+      <div className="product-grid w-full h-full md:h-[75vh] overflow-y-scroll overflow-x-hidden no-scroll">
         {products.map(product => (
           <ProductCard key={product.name} product={product} />
         ))}

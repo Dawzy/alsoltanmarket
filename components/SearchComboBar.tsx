@@ -4,6 +4,7 @@ import { Combobox, ComboboxButton, ComboboxInput, ComboboxOption, ComboboxOption
 import { Fragment, useState } from "react";
 import { hasSubstring } from "@/utils";
 import { SearchBarProps } from "@/types";
+import { FaSearch } from "react-icons/fa";
 
 const SearchComboBar = ({ list, placeholder, value, setValue }: SearchBarProps) => {
   const [query, setQuery] = useState(value);
@@ -13,18 +14,20 @@ const SearchComboBar = ({ list, placeholder, value, setValue }: SearchBarProps) 
 
   return (
     <Combobox value={value} onChange={(newValue: string) => setValue(newValue || "")} as="div"
-    className="relative w-1/2 max-sm:flex-col max-sm:gap-4 max-sm:w-full flex items-center max-w-3xl">
+    className="relative w-full lg:w-1/2 max-sm:flex-col max-sm:gap-4 max-sm:w-full flex items-center max-w-3xl">
       <div className="relative w-full">
         <div className="w-full input p-4 flex items-center justify-between z-10">
           <ComboboxInput
             autoComplete="off"
-            className="w-full input p-4 outline-none"
+            className="w-full input outline-none"
             placeholder={placeholder || "search"}
             displayValue={(val: string) => val}
             onChange={(e) => setQuery(e.target.value)}
           />
-          <ComboboxButton className="bg-transparent border-l-2 border-gray-300 pl-2"
-          > Search </ComboboxButton>
+          <ComboboxButton className="bg-transparent lg:border-l-2 border-gray-300 pl-2">
+            <label className="hidden lg:inline">Search</label>
+            <FaSearch className="lg:hidden text-2xl"/>
+          </ComboboxButton>
         </div>
 
         {/* Options Group */}

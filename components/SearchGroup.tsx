@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Input, Button } from "@headlessui/react";
+import { FaSearch } from "react-icons/fa";
 
 const SearchGroup = () => {
   const router = useRouter();
@@ -73,8 +74,8 @@ const SearchGroup = () => {
 
   return (
     <>
-      <div className="flex w-full gap-3 items-center">
-        <div className="w-1/2 input p-4 flex items-center justify-between z-10">
+      <div className="flex flex-col sm:flex-row w-full gap-3 items-center">
+        <div className="w-full lg:w-1/2 input p-4 flex items-center justify-between z-10">
           <Input
             className="bg-transparent w-full outline-none"
             placeholder="Search in products..."
@@ -82,10 +83,11 @@ const SearchGroup = () => {
             onChange={(e) => setTerm(e.target.value)}
           />
           <Button
-            className="bg-transparent border-l-2 border-gray-300 pl-2"
+            className="bg-transparent lg:border-l-2 border-gray-300 pl-2"
             onClick={updateResults}
           >
-            Search
+            <label className="hidden lg:inline">Search</label>
+            <FaSearch className="lg:hidden text-2xl"/>
           </Button>
         </div>
         <SearchComboBar list={AISLES} placeholder="Search in aisles..." value={aisle} setValue={setAisle} />
@@ -96,7 +98,7 @@ const SearchGroup = () => {
       </div>
       {searchStatus !== "" &&
         <p className="text-2xl w-full font-bold text-center">
-          {searchStatus}. <Link className="underline text-blue-400" href="/products">Clear search</Link>
+          <label className="hidden sm:inline">{searchStatus}.</label> <Link className="underline text-blue-400" href="/products">Clear search</Link>
         </p>
       }
     </>

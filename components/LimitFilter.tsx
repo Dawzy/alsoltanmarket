@@ -9,7 +9,7 @@ const LimitFilter = ({ selected, setSelected }: LimitFilterProps) => {
 
   return (
     <Listbox value={selected} onChange={(newValue: number) => setSelected(newValue)}>
-      <ListboxButton className="relative input min-w-20 flex justify-center items-center gap-2">
+      <ListboxButton className="relative input min-w-20 w-full sm:w-min flex justify-center items-center gap-2">
         <p className="absolute left-4">{selected}</p>
         <FaChevronDown
           className="pointer-events-none absolute right-3"
