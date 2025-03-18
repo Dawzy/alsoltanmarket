@@ -74,7 +74,7 @@ const SearchGroup = () => {
 
   return (
     <>
-      <div className="flex flex-col sm:flex-row w-full gap-3 items-center">
+      <div className="flex flex-col sm:flex-row w-full gap-3 items-center pb-2">
         <div className="w-full lg:w-1/2 input p-4 flex items-center justify-between z-10">
           <Input
             className="bg-transparent w-full outline-none"
@@ -92,9 +92,6 @@ const SearchGroup = () => {
         </div>
         <SearchComboBar list={AISLES} placeholder="Search in aisles..." value={aisle} setValue={setAisle} />
         <LimitFilter selected={limit} setSelected={setLimit}/>
-        <p className="text-center font-bold text-lg">
-          *Not all products are listed. For inquiries on prices or availability, call during open hours.
-        </p>
       </div>
       {searchStatus !== "" &&
         <p className="text-2xl w-full font-bold text-center">
