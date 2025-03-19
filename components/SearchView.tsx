@@ -1,17 +1,15 @@
 "use client"
 
-import { LimitFilter, SearchComboBar } from "@/components";
+import { LimitFilter, SearchBar, SearchCombobox } from "@/components";
 import { AISLES, LIMITS, PARAMS } from "@/constants";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { Input, Button } from "@headlessui/react";
-import { FaSearch } from "react-icons/fa";
 
-const SearchGroup = () => {
+const SearchView = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
-  
+
   const [term, setTerm] = useState("");
   const [aisle, setAisle] = useState("");
   const [limit, setLimit] = useState(LIMITS[0]);
@@ -19,7 +17,7 @@ const SearchGroup = () => {
 
   useEffect(() => {
     updateResults();
-  }, [aisle, limit])
+  }, [aisle, limit]);
 
   useEffect(() => {
     const params = new URLSearchParams(searchParams);
@@ -27,7 +25,7 @@ const SearchGroup = () => {
     const aisleParam = params.get(PARAMS.AISLE);
     const limitParam = params.get(PARAMS.LIMIT);
 
-    // Update search status
+    // Update search status string
     let newStatus = "";
     if (termParam || aisleParam) {
       newStatus = "Showing results ";
@@ -39,9 +37,9 @@ const SearchGroup = () => {
     setSearchStatus(newStatus);
     
     // Update states
-    setTerm(termParam  || "")
+    setTerm(termParam  || "");
     setAisle(aisleParam || "");
-    setLimit( parseInt(limitParam || "10") )
+    setLimit( parseInt(limitParam || "10") );
 
   }, [searchParams]);
 
@@ -74,23 +72,9 @@ const SearchGroup = () => {
 
   return (
     <>
-      <div className="flex flex-col sm:flex-row w-full gap-3 items-center pb-2">
-        <div className="w-full lg:w-1/2 input p-4 flex items-center justify-between z-10">
-          <Input
-            className="bg-transparent w-full outline-none"
-            placeholder="Search in products..."
-            value={term}
-            onChange={(e) => setTerm(e.target.value)}
-          />
-          <Button
-            className="bg-transparent lg:border-l-2 border-gray-300 pl-2"
-            onClick={updateResults}
-          >
-            <label className="hidden lg:inline">Search</label>
-            <FaSearch className="lg:hidden text-2xl"/>
-          </Button>
-        </div>
-        <SearchComboBar list={AISLES} placeholder="Search in aisles..." value={aisle} setValue={setAisle} />
+      <div className="flex flex-col sm:flex-row w-full gap-3 justify-center items-center pb-2">
+        <SearchBar onSearch={updateResults} value={term} setValue={setTerm} placeholder="Search in products..."/>
+        <SearchCombobox list={AISLES} placeholder="Search in aisles..." value={aisle} setValue={setAisle} />
         <LimitFilter selected={limit} setSelected={setLimit}/>
       </div>
       {searchStatus !== "" &&
@@ -101,4 +85,4 @@ const SearchGroup = () => {
     </>
   )
 }
-export default SearchGroup
+export default SearchView

@@ -1,12 +1,5 @@
 import { Dispatch, MouseEventHandler, ReactNode, SetStateAction } from "react";
 
-export interface ButtonProps {
-  text: string;
-  onClick: MouseEventHandler<HTMLButtonElement>;
-  width?: string;
-  isSecondary?: boolean;
-};
-
 export interface ServiceHintProps {
   children: ReactNode;
   text: string;
@@ -27,10 +20,14 @@ export interface ProductCardProps {
 }
 
 export interface SearchBarProps {
-  list: string[];
   placeholder?: string;
   value: string;
   setValue: Dispatch<SetStateAction<string>>;
+  onSearch?: () => void;
+}
+
+export interface SearchComboboxProps extends SearchBarProps {
+  list: string[];
 }
 
 export interface LimitFilterProps {

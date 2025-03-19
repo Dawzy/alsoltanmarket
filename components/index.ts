@@ -1,23 +1,23 @@
+import Background from "./Background";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import SearchComboBar from "./SearchComboBar";
-import ServiceHint from "./ServiceHint";
-import Background from "./Background";
+import SearchBar from "./SearchBar";
+import SearchCombobox from "./SearchCombobox";
 import LimitFilter from "./LimitFilter";
-import HoursGroup from "./HoursGroup"
-import ServicesGroup from "./ServicesGroup";
+import HoursView from "./HoursView"
+import SearchView from "./SearchView";
 import ProductCard from "./ProductCard";
-import SearchGroup from "./SearchGroup";
+import ServicesView from "./ServicesView";
 
 export {
   Navbar,
   Footer,
-  SearchComboBar,
+  SearchCombobox,
   LimitFilter,
-  ServiceHint,
   Background,
-  HoursGroup,
-  ServicesGroup,
   ProductCard,
-  SearchGroup
+  HoursView,
+  SearchView,
+  ServicesView,
+  SearchBar
 }

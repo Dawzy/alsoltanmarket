@@ -1,4 +1,4 @@
-import { HoursGroup, ServicesGroup } from "@/components";
+import { ServicesView, HoursView } from "@/components";
 
 const Home = () => {
   return (
@@ -7,8 +7,8 @@ const Home = () => {
         "Family owned convenience store with an emphasis on convenience!"
       </p>
       <div className="flex flex-col md:flex-row gap-10 justify-between items-center md:items-start">
-        <ServicesGroup />
-        <HoursGroup />
+        <ServicesView />
+        <HoursView />
       </div>
     </div>
   )

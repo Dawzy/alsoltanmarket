@@ -1,12 +1,11 @@
-import { ServiceHint } from "@/components";
-import { FaBitcoin, FaDhl, FaDollarSign, FaSmoking } from "react-icons/fa";
+import { FaBitcoin, FaDhl } from "react-icons/fa";
 import { MdAtm } from "react-icons/md";
 
 import Image from "next/image";
 import NILogo from "@/public/NILogo.jpg";
 import { FaUps } from "react-icons/fa6";
 
-const ServicesGroup = () => {
+const ServicesView = () => {
   return (
     <div className="flex flex-col justify-center gap-2">
       <p className="text-center text-4xl font-bold">Services:</p>
@@ -21,4 +20,4 @@ const ServicesGroup = () => {
     </div>
   )
 }
-export default ServicesGroup
+export default ServicesView

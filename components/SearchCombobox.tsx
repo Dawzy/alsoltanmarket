@@ -3,10 +3,10 @@
 import { Combobox, ComboboxButton, ComboboxInput, ComboboxOption, ComboboxOptions, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
 import { hasSubstring } from "@/utils";
-import { SearchBarProps } from "@/types";
+import { SearchComboboxProps } from "@/types";
 import { FaSearch } from "react-icons/fa";
 
-const SearchComboBar = ({ list, placeholder, value, setValue }: SearchBarProps) => {
+const SearchCombobox = ({ list, placeholder, value, setValue }: SearchComboboxProps) => {
   const [query, setQuery] = useState(value);
   
   // List of items to autocomplete
@@ -14,7 +14,7 @@ const SearchComboBar = ({ list, placeholder, value, setValue }: SearchBarProps) 
 
   return (
     <Combobox value={value} onChange={(newValue: string) => setValue(newValue || "")} as="div"
-    className="relative w-full lg:w-1/2 max-sm:flex-col max-sm:gap-4 max-sm:w-full flex items-center max-w-3xl">
+    className="relative w-full lg:w-1/3 max-sm:flex-col max-sm:gap-4 max-sm:w-full flex items-center max-w-xl">
       <div className="relative w-full">
         <div className="w-full input p-4 flex items-center justify-between z-10">
           <ComboboxInput
@@ -52,4 +52,4 @@ const SearchComboBar = ({ list, placeholder, value, setValue }: SearchBarProps) 
   )
 }
 
-export default SearchComboBar;
+export default SearchCombobox;
